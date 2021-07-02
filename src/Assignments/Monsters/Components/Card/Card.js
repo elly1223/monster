@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import "./Card.scss";
+import React, { Component } from 'react';
+import './Card.scss';
 
 /***********************************************************
   Card 컴포넌트 구조
@@ -20,7 +20,11 @@ import "./Card.scss";
 class Card extends Component {
   render() {
     return (
-      <div className="card-container"></div>
+      <div className="card-container">
+        <img src={`https://robohash.org/${this.props.id}?set=set2&size=180x180`} alt={this.props.id} />
+        <h2>{this.props.name}</h2>
+        <p>{this.props.email}</p>
+      </div>
     );
   }
 }
